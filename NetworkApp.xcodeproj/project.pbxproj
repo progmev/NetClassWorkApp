@@ -16,6 +16,9 @@
 		2D0683B3280494D0000DD848 /* MainActionCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0683B2280494D0000DD848 /* MainActionCVC.swift */; };
 		2D0683B528049588000DD848 /* ActionCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0683B428049588000DD848 /* ActionCVCell.swift */; };
 		2D28A37728049DCB00F0269C /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D28A37628049DCB00F0269C /* ImageVC.swift */; };
+		2D91E52C28088FA00010A841 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52B28088FA00010A841 /* UsersTVC.swift */; };
+		2D91E52E28088FC40010A841 /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52D28088FC40010A841 /* UserTVCell.swift */; };
+		2D91E530280893540010A841 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52F280893540010A841 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		2D0683B2280494D0000DD848 /* MainActionCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionCVC.swift; sourceTree = "<group>"; };
 		2D0683B428049588000DD848 /* ActionCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCVCell.swift; sourceTree = "<group>"; };
 		2D28A37628049DCB00F0269C /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		2D91E52B28088FA00010A841 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
+		2D91E52D28088FC40010A841 /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
+		2D91E52F280893540010A841 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 			children = (
 				2D28A37428049D9F00F0269C /* MainActions */,
 				2D28A37528049DA600F0269C /* ImageVC */,
+				2D91E52A28088F680010A841 /* Users */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		2D0683AE2804931A000DD848 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D91E52F280893540010A841 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +138,15 @@
 				2D28A37628049DCB00F0269C /* ImageVC.swift */,
 			);
 			path = ImageVC;
+			sourceTree = "<group>";
+		};
+		2D91E52A28088F680010A841 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				2D91E52B28088FA00010A841 /* UsersTVC.swift */,
+				2D91E52D28088FC40010A841 /* UserTVCell.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +224,10 @@
 				2D0683B3280494D0000DD848 /* MainActionCVC.swift in Sources */,
 				2D28A37728049DCB00F0269C /* ImageVC.swift in Sources */,
 				2D0683B528049588000DD848 /* ActionCVCell.swift in Sources */,
+				2D91E52E28088FC40010A841 /* UserTVCell.swift in Sources */,
 				2D068398280492DF000DD848 /* AppDelegate.swift in Sources */,
+				2D91E530280893540010A841 /* Models.swift in Sources */,
+				2D91E52C28088FA00010A841 /* UsersTVC.swift in Sources */,
 				2D06839A280492DF000DD848 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
