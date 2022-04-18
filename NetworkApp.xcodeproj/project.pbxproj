@@ -19,6 +19,7 @@
 		2D91E52C28088FA00010A841 /* UsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52B28088FA00010A841 /* UsersTVC.swift */; };
 		2D91E52E28088FC40010A841 /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52D28088FC40010A841 /* UserTVCell.swift */; };
 		2D91E530280893540010A841 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52F280893540010A841 /* Models.swift */; };
+		2DCA423F280DB7C300441D44 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA423E280DB7C300441D44 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2D91E52B28088FA00010A841 /* UsersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTVC.swift; sourceTree = "<group>"; };
 		2D91E52D28088FC40010A841 /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
 		2D91E52F280893540010A841 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		2DCA423E280DB7C300441D44 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,9 @@
 				2D28A37428049D9F00F0269C /* MainActions */,
 				2D28A37528049DA600F0269C /* ImageVC */,
 				2D91E52A28088F680010A841 /* Users */,
+				2DCA423D280DB7A800441D44 /* Detail */,
+				2DCA4240280DBAA600441D44 /* PostsAndComments */,
+				2DCA4241280DBAB200441D44 /* AlbomsAndPhotos */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -147,6 +152,28 @@
 				2D91E52D28088FC40010A841 /* UserTVCell.swift */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		2DCA423D280DB7A800441D44 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2DCA423E280DB7C300441D44 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2DCA4240280DBAA600441D44 /* PostsAndComments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostsAndComments;
+			sourceTree = "<group>";
+		};
+		2DCA4241280DBAB200441D44 /* AlbomsAndPhotos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlbomsAndPhotos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +254,7 @@
 				2D91E52E28088FC40010A841 /* UserTVCell.swift in Sources */,
 				2D068398280492DF000DD848 /* AppDelegate.swift in Sources */,
 				2D91E530280893540010A841 /* Models.swift in Sources */,
+				2DCA423F280DB7C300441D44 /* DetailViewController.swift in Sources */,
 				2D91E52C28088FA00010A841 /* UsersTVC.swift in Sources */,
 				2D06839A280492DF000DD848 /* SceneDelegate.swift in Sources */,
 			);
