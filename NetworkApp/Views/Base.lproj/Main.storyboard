@@ -334,6 +334,9 @@
                                                             <constraint firstAttribute="height" constant="25" id="C8K-pC-zn6"/>
                                                         </constraints>
                                                         <state key="normal" title="Posts"/>
+                                                        <connections>
+                                                            <segue destination="yIZ-10-guw" kind="show" identifier="showPosts" id="HAI-61-L0m"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-ZA-chr">
                                                         <rect key="frame" x="0.0" y="644" width="398" height="25"/>
@@ -341,6 +344,9 @@
                                                             <constraint firstAttribute="height" constant="25" id="xWK-3L-r3S"/>
                                                         </constraints>
                                                         <state key="normal" title="Alboms"/>
+                                                        <connections>
+                                                            <segue destination="tqk-Ua-5FS" kind="show" identifier="albomsSegue" id="UIC-2h-WUP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -393,6 +399,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfX-BP-S53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2955" y="619"/>
+        </scene>
+        <!--PostsAndCommets-->
+        <scene sceneID="UtO-lB-psr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostsAndCommets" id="yIZ-10-guw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jtA-iW-aiK"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bj-Fp-Sfx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3541" y="568"/>
+        </scene>
+        <!--AlbomsAndPhotos-->
+        <scene sceneID="Dg8-k0-I3N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AlbomsAndPhotos" id="tqk-Ua-5FS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FhH-sw-Eld"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEY-jj-HEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3538" y="670"/>
         </scene>
         <!--ImageVC-->
         <scene sceneID="g0N-EM-A8G">

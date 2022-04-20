@@ -48,14 +48,14 @@ final class DetailViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showPosts",
-//           let postsVC = segue.destination as? PostsTableViewController
-//        {
-//            postsVC.user = user
-//        } else if segue.identifier == "albomsSegue",
-//                  let albomsTableVC = segue.destination as? AlbomsTableVC
-//        {
-//            albomsTableVC.user = user
-//        }
+        if segue.identifier == "showPosts",
+           let postsVC = segue.destination as? PostsTableViewController
+        {
+            postsVC.user = user
+        } /*else if segue.identifier == "albomsSegue",
+                  let albomsTableVC = segue.destination as? AlbomsTableVC
+        {
+            albomsTableVC.user = user
+        }*/
     }
 }

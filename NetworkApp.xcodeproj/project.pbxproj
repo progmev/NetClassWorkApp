@@ -20,6 +20,13 @@
 		2D91E52E28088FC40010A841 /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52D28088FC40010A841 /* UserTVCell.swift */; };
 		2D91E530280893540010A841 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D91E52F280893540010A841 /* Models.swift */; };
 		2DCA423F280DB7C300441D44 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA423E280DB7C300441D44 /* DetailViewController.swift */; };
+		2DCA4243280DCD7E00441D44 /* PostsAndCommets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCA4242280DCD7E00441D44 /* PostsAndCommets.storyboard */; };
+		2DCA4245280DCD8F00441D44 /* AlbomsAndPhotos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCA4244280DCD8F00441D44 /* AlbomsAndPhotos.storyboard */; };
+		2DCA4247280DD1EE00441D44 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA4246280DD1EE00441D44 /* PostsTableViewController.swift */; };
+		2DCA4249280DD8B600441D44 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCA4248280DD8B600441D44 /* AddPostVC.swift */; };
+		2DCA424C280DE66800441D44 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2DCA424B280DE66800441D44 /* SwiftyJSON */; };
+		2DCA424F280DE8B700441D44 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2DCA424E280DE8B700441D44 /* Alamofire */; };
+		2DCA4252280DE8CA00441D44 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2DCA4251280DE8CA00441D44 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,10 @@
 		2D91E52D28088FC40010A841 /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
 		2D91E52F280893540010A841 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		2DCA423E280DB7C300441D44 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2DCA4242280DCD7E00441D44 /* PostsAndCommets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostsAndCommets.storyboard; sourceTree = "<group>"; };
+		2DCA4244280DCD8F00441D44 /* AlbomsAndPhotos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbomsAndPhotos.storyboard; sourceTree = "<group>"; };
+		2DCA4246280DD1EE00441D44 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		2DCA4248280DD8B600441D44 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCA424C280DE66800441D44 /* SwiftyJSON in Frameworks */,
+				2DCA424F280DE8B700441D44 /* Alamofire in Frameworks */,
+				2DCA4252280DE8CA00441D44 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +107,10 @@
 		2D0683AC28049305000DD848 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2D06839D280492DF000DD848 /* Main.storyboard */,
 				2D0683A2280492E0000DD848 /* LaunchScreen.storyboard */,
+				2D06839D280492DF000DD848 /* Main.storyboard */,
+				2DCA4242280DCD7E00441D44 /* PostsAndCommets.storyboard */,
+				2DCA4244280DCD8F00441D44 /* AlbomsAndPhotos.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +181,8 @@
 		2DCA4240280DBAA600441D44 /* PostsAndComments */ = {
 			isa = PBXGroup;
 			children = (
+				2DCA4246280DD1EE00441D44 /* PostsTableViewController.swift */,
+				2DCA4248280DD8B600441D44 /* AddPostVC.swift */,
 			);
 			path = PostsAndComments;
 			sourceTree = "<group>";
@@ -192,6 +210,11 @@
 			dependencies = (
 			);
 			name = NetworkApp;
+			packageProductDependencies = (
+				2DCA424B280DE66800441D44 /* SwiftyJSON */,
+				2DCA424E280DE8B700441D44 /* Alamofire */,
+				2DCA4251280DE8CA00441D44 /* AlamofireImage */,
+			);
 			productName = NetworkApp;
 			productReference = 2D068394280492DF000DD848 /* NetworkApp.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +243,11 @@
 				Base,
 			);
 			mainGroup = 2D06838B280492DF000DD848;
+			packageReferences = (
+				2DCA424A280DE66800441D44 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				2DCA424D280DE8B700441D44 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2DCA4250280DE8CA00441D44 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 2D068395280492DF000DD848 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -235,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D0683A4280492E0000DD848 /* LaunchScreen.storyboard in Resources */,
+				2DCA4243280DCD7E00441D44 /* PostsAndCommets.storyboard in Resources */,
+				2DCA4245280DCD8F00441D44 /* AlbomsAndPhotos.storyboard in Resources */,
 				2D0683A1280492E0000DD848 /* Assets.xcassets in Resources */,
 				2D06839F280492DF000DD848 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +286,8 @@
 				2D91E530280893540010A841 /* Models.swift in Sources */,
 				2DCA423F280DB7C300441D44 /* DetailViewController.swift in Sources */,
 				2D91E52C28088FA00010A841 /* UsersTVC.swift in Sources */,
+				2DCA4247280DD1EE00441D44 /* PostsTableViewController.swift in Sources */,
+				2DCA4249280DD8B600441D44 /* AddPostVC.swift in Sources */,
 				2D06839A280492DF000DD848 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +506,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2DCA424A280DE66800441D44 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2DCA424D280DE8B700441D44 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2DCA4250280DE8CA00441D44 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2DCA424B280DE66800441D44 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DCA424A280DE66800441D44 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		2DCA424E280DE8B700441D44 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DCA424D280DE8B700441D44 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2DCA4251280DE8CA00441D44 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DCA4250280DE8CA00441D44 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D06838C280492DF000DD848 /* Project object */;
 }
