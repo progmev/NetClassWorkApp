@@ -24,9 +24,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tSb-iZ-jYw" kind="show" id="tns-CJ-ExI"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,19 +34,22 @@
                     <navigationItem key="navigationItem" title="Title" id="mpA-tp-vxs">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="79D-Uv-kuT">
                             <connections>
-                                <segue destination="DbY-pE-yWY" kind="show" id="7tK-Ud-4np"/>
+                                <segue destination="DbY-pE-yWY" kind="show" identifier="addPost" id="7tK-Ud-4np"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="tSb-iZ-jYw" kind="show" identifier="showComments" id="Rxu-rt-awV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fbt-zQ-Iry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1243" y="139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--CommentsTVC-->
         <scene sceneID="omU-9l-Iyu">
             <objects>
-                <tableViewController id="tSb-iZ-jYw" sceneMemberID="viewController">
+                <tableViewController id="tSb-iZ-jYw" customClass="CommentsTVC" customModule="NetworkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="EeV-E1-qW8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

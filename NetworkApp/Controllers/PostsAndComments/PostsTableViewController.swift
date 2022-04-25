@@ -9,6 +9,7 @@ import UIKit
 
 protocol PostsTableVCProtocol {
     func newPostAdded()
+    func postUpdated()
 }
 
 class PostsTableViewController: UITableViewController {
@@ -34,48 +35,49 @@ class PostsTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteItem = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (contextualAction, view, boolValue) in
+            guard let id = self?.posts[indexPath.row].id else { return }
+            ApiService.deletePost(id: id) { [weak self] result, error in
+//                self?.fetchPosts()
+                if let _ = result {
+                    self?.posts.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+            }
+        }
+        let updateItem = UIContextualAction(style: .normal, title: "Update") { [weak self]  (contextualAction, view, boolValue) in
+            let post = self?.posts[indexPath.row]
+            self?.performSegue(withIdentifier: "addPost", sender: post)
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteItem, updateItem])
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            // Delete запрос на сервак
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        return swipeActions
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let postId = posts[indexPath.row].id
+        performSegue(withIdentifier: "showComments", sender: postId)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destVC = segue.destination as? AddPostVC {
-            destVC.user = user
-            destVC.delegate = self
+        if segue.identifier == "showComments",
+           let postId = sender as? Int,
+           let commentsTVC = segue.destination as? CommentsTVC {
+            commentsTVC.postId = postId
+        } else if segue.identifier == "addPost",
+                  let addPostVC = segue.destination as? AddPostVC {
+            addPostVC.user = user
+            addPostVC.delegate = self
+            guard let post = sender as? Post else {
+                return
+            }
+            addPostVC.post = post
         }
     }
     
@@ -104,7 +106,13 @@ class PostsTableViewController: UITableViewController {
 }
 
 extension PostsTableViewController: PostsTableVCProtocol {
+    
+    func postUpdated() {
+        fetchPosts()
+    }
+    
     func newPostAdded() {
         fetchPosts()
     }
+    
 }

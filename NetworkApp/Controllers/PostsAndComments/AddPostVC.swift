@@ -15,8 +15,15 @@ class AddPostVC: UIViewController {
     @IBOutlet weak var bodyForPostTV: UITextView!
     
     var user: User!
+    var post: Post?
     
     var delegate: PostsTableVCProtocol?
+    
+    override func viewDidLoad() {
+        // edit logic
+        titleForPostTF.text = post?.title
+        bodyForPostTV.text = post?.body
+    }
     
     @IBAction func addNewPostURLSession() {
         

@@ -28,4 +28,9 @@ final class ApiConstants {
     // comments
     static let commentsLocalURLString = baseLocalURLString + "comments"
     static let commentsLocalURL = URL(string: commentsLocalURLString)
+    
+    // albums
+    static let albumsPath = baseURL + "/albums"
+    // photos
+    static let photosPath = baseURL + "/photos"
 }
